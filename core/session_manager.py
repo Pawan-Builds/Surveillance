@@ -1,0 +1,30 @@
+import uuid
+from core.database_manager import DatabaseManager
+from datetime import datetime
+
+class SessionManager:
+    def __init__(self, db_manager: DatabaseManager):
+        self.db = db_manager
+
+    def create_session(self, target_info: dict) -> str:
+        session_id = str(uuid.uuid4())
+        session_data = {
+            'session_id': session_id,
+            'target_phone': target_info.get('phone'),
+            'target_os': target_info.get('android_version'),
+            'target_app': target_info.get('target_app'),
+            'status': 'active',
+            'persistence_level': None,
+            'created_at': datetime.now().isoformat()
+        }
+        self.db.insert_session(session_data)
+        return session_id
+
+    def get_session(self, session_id: str) -> dict:
+        return self.db.get_session(session_id)
+
+    def get_active_sessions(self) -> list:
+        return self.db.get_active_sessions()
+
+    def update_session(self, session_id: str, updates: dict):
+        self.db.update_session(session_id, updates)

