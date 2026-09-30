@@ -1,6 +1,5 @@
 import json
 import os
-import base64
 from cryptography.fernet import Fernet
 from dataclasses import dataclass
 
@@ -33,7 +32,7 @@ class ConfigManager:
         key_str = self.data.get('evasion', {}).get('polymorphic', {}).get('encryption_key')
         if key_str:
             # Simple base64 decode for key generation (in production use Fernet key generation)
-            self.cipher = Fernet(base64.urlsafe_b64encode(key_str.encode()))
+            self.cipher = Fernet(key_str.encode())
         else:
             self.cipher = None
 
@@ -66,3 +65,16 @@ class ConfigManager:
         if plain_text and self.cipher:
             return self.cipher.decrypt(plain_text.encode()).decode()
         return plain_text
+
+    def set(self, key, value):
+        """Set configuration value"""
+        keys = key.split('.')
+        d = self.data
+        for k in keys[:-1]:
+            d = d.setdefault(k, {})
+        d[keys[-1]] = value
+
+    def save(self):
+        """Save configuration to file"""
+        with open(self.config_file, 'w') as f:
+            json.dump(self.data, f, indent=2)

@@ -1,0 +1,9 @@
+[*] Exfil Engine Initialized: Session sess_1790705170
+[+] Generated new encryption key and stored in config
+[*] Starting C2 server on 0.0.0.0:5001
+ * Serving Flask app 'c2.comms_manager'
+[+] C2 server started successfully on 0.0.0.0:5001
+ * Debug mode: off
+[+] HTTP server started on 0.0.0.0:8081
+ * Serving Flask app 'c2.comms_manager'
+ * Debug mode: off

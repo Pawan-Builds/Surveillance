@@ -1,0 +1,771 @@
+2026-09-29 06:24:46,430 - __main__ - INFO - Initializing framework...
+2026-09-29 06:24:46,431 - __main__ - INFO - Database initialized
+2026-09-29 06:24:46,431 - __main__ - INFO - Session manager initialized
+2026-09-29 06:24:46,431 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 06:24:46,431 - __main__ - INFO - Communication manager initialized
+2026-09-29 06:24:46,431 - __main__ - INFO - C2 server initialized
+2026-09-29 06:24:46,431 - __main__ - INFO - Framework initialization complete
+2026-09-29 06:24:46,431 - __main__ - INFO - Starting framework...
+2026-09-29 06:24:46,432 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 06:24:46,432 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:5000
+2026-09-29 06:24:46,434 - __main__ - INFO - C2 server started
+2026-09-29 06:24:46,435 - __main__ - INFO - Communication manager started
+2026-09-29 06:24:46,437 - __main__ - INFO - Exfiltration engine started
+2026-09-29 06:24:46,437 - __main__ - INFO - Framework started successfully
+2026-09-29 06:24:46,440 - root - ERROR - 2026-09-29T06:24:46.440160 - Unknown error while exfiltrating start_server: name 'logging' is not defined
+2026-09-29 06:24:56,288 - __main__ - INFO - Received signal 2, shutting down...
+2026-09-29 06:24:56,288 - __main__ - INFO - Stopping framework...
+2026-09-29 06:24:56,288 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 06:25:01,289 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 06:25:01,289 - __main__ - INFO - C2 server stopped
+2026-09-29 06:25:01,289 - root - ERROR - 2026-09-29T06:25:01.289290 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 06:25:01,289 - __main__ - INFO - Communication manager stopped
+2026-09-29 06:25:01,420 - __main__ - INFO - Exfiltration engine stopped
+2026-09-29 06:25:01,420 - __main__ - INFO - Framework stopped successfully
+2026-09-29 06:25:07,333 - __main__ - INFO - Initializing framework...
+2026-09-29 06:25:07,334 - __main__ - INFO - Database initialized
+2026-09-29 06:25:07,334 - __main__ - INFO - Session manager initialized
+2026-09-29 06:25:07,334 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 06:25:07,334 - __main__ - INFO - Communication manager initialized
+2026-09-29 06:25:07,334 - __main__ - INFO - C2 server initialized
+2026-09-29 06:25:07,334 - __main__ - INFO - Framework initialization complete
+2026-09-29 06:25:07,334 - __main__ - INFO - Starting framework...
+2026-09-29 06:25:07,334 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 06:25:07,335 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:5000
+2026-09-29 06:25:07,335 - __main__ - INFO - C2 server started
+2026-09-29 06:25:07,343 - __main__ - INFO - Communication manager started
+2026-09-29 06:25:07,344 - __main__ - INFO - Exfiltration engine started
+2026-09-29 06:25:07,344 - __main__ - INFO - Framework started successfully
+2026-09-29 06:25:07,346 - root - ERROR - 2026-09-29T06:25:07.346618 - Unknown error while exfiltrating start_server: name 'logging' is not defined
+2026-09-29 06:25:28,058 - __main__ - INFO - Received signal 2, shutting down...
+2026-09-29 06:25:28,058 - __main__ - INFO - Stopping framework...
+2026-09-29 06:25:28,058 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 06:25:33,058 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 06:25:33,059 - __main__ - INFO - C2 server stopped
+2026-09-29 06:25:33,059 - root - ERROR - 2026-09-29T06:25:33.059154 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 06:25:33,059 - __main__ - INFO - Communication manager stopped
+2026-09-29 06:25:33,348 - __main__ - INFO - Exfiltration engine stopped
+2026-09-29 06:25:33,348 - __main__ - INFO - Framework stopped successfully
+2026-09-29 06:26:11,382 - __main__ - INFO - Initializing framework...
+2026-09-29 06:26:11,383 - __main__ - INFO - Database initialized
+2026-09-29 06:26:11,383 - __main__ - INFO - Session manager initialized
+2026-09-29 06:26:11,383 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 06:26:11,383 - __main__ - INFO - Communication manager initialized
+2026-09-29 06:26:11,383 - __main__ - INFO - C2 server initialized
+2026-09-29 06:26:11,383 - __main__ - INFO - Framework initialization complete
+2026-09-29 06:26:11,383 - __main__ - INFO - Starting framework...
+2026-09-29 06:26:11,387 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 06:26:11,387 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:5000
+2026-09-29 06:26:11,391 - __main__ - INFO - C2 server started
+2026-09-29 06:26:11,392 - __main__ - INFO - Communication manager started
+2026-09-29 06:26:11,395 - __main__ - INFO - Exfiltration engine started
+2026-09-29 06:26:11,395 - __main__ - INFO - Framework started successfully
+2026-09-29 06:26:11,397 - root - WARNING - Port 5000 is not available, using port 5001 instead
+2026-09-29 06:26:11,399 - root - ERROR - 2026-09-29T06:26:11.399023 - Unknown error while exfiltrating start_server: certfile should be a valid filesystem path
+2026-09-29 06:26:27,591 - __main__ - INFO - Received signal 2, shutting down...
+2026-09-29 06:26:27,591 - __main__ - INFO - Stopping framework...
+2026-09-29 06:26:27,591 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 06:26:32,592 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 06:26:32,593 - __main__ - INFO - C2 server stopped
+2026-09-29 06:26:32,593 - root - ERROR - 2026-09-29T06:26:32.593076 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 06:26:32,593 - __main__ - INFO - Communication manager stopped
+2026-09-29 06:26:33,404 - __main__ - INFO - Exfiltration engine stopped
+2026-09-29 06:26:33,404 - __main__ - INFO - Framework stopped successfully
+2026-09-29 06:30:32,050 - __main__ - INFO - Initializing framework...
+2026-09-29 06:30:32,050 - __main__ - INFO - Database initialized
+2026-09-29 06:30:32,050 - __main__ - INFO - Session manager initialized
+2026-09-29 06:30:32,050 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 06:30:32,050 - __main__ - INFO - Communication manager initialized
+2026-09-29 06:30:32,050 - __main__ - INFO - C2 server initialized
+2026-09-29 06:30:32,050 - __main__ - INFO - Framework initialization complete
+2026-09-29 06:30:32,050 - __main__ - INFO - Starting framework...
+2026-09-29 06:30:32,051 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 06:30:32,051 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:5000
+2026-09-29 06:30:32,060 - __main__ - INFO - C2 server started
+2026-09-29 06:30:32,062 - __main__ - INFO - Communication manager started
+2026-09-29 06:30:32,064 - __main__ - INFO - Exfiltration engine started
+2026-09-29 06:30:32,064 - __main__ - INFO - Framework started successfully
+2026-09-29 06:30:32,065 - root - WARNING - Port 5000 is not available, using port 5001 instead
+2026-09-29 06:30:32,068 - root - ERROR - 2026-09-29T06:30:32.068837 - Unknown error while exfiltrating start_server: certfile should be a valid filesystem path
+2026-09-29 06:31:26,290 - __main__ - INFO - Received signal 2, shutting down...
+2026-09-29 06:31:26,290 - __main__ - INFO - Stopping framework...
+2026-09-29 06:31:26,290 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 06:31:31,291 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 06:31:31,294 - __main__ - INFO - C2 server stopped
+2026-09-29 06:31:31,295 - root - ERROR - 2026-09-29T06:31:31.295053 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 06:31:31,297 - __main__ - INFO - Communication manager stopped
+2026-09-29 06:31:32,155 - __main__ - INFO - Exfiltration engine stopped
+2026-09-29 06:31:32,156 - __main__ - INFO - Framework stopped successfully
+2026-09-29 08:27:15,391 - __main__ - INFO - Initializing framework...
+2026-09-29 08:27:15,413 - __main__ - INFO - Database initialized
+2026-09-29 08:27:15,413 - __main__ - INFO - Session manager initialized
+2026-09-29 08:27:15,413 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 08:27:15,414 - __main__ - INFO - Communication manager initialized
+2026-09-29 08:27:15,414 - __main__ - INFO - C2 server initialized
+2026-09-29 08:27:15,414 - __main__ - INFO - Framework initialization complete
+2026-09-29 08:27:15,414 - __main__ - INFO - Starting framework...
+2026-09-29 08:27:15,415 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 08:27:15,415 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:5000
+2026-09-29 08:27:15,418 - __main__ - INFO - C2 server started
+2026-09-29 08:27:15,421 - __main__ - INFO - Communication manager started
+2026-09-29 08:27:15,422 - __main__ - INFO - Exfiltration engine started
+2026-09-29 08:27:15,422 - __main__ - INFO - Framework started successfully
+2026-09-29 08:27:15,427 - root - WARNING - Port 5000 is not available, using port 5001 instead
+2026-09-29 08:27:15,430 - root - ERROR - 2026-09-29T08:27:15.430348 - Unknown error while exfiltrating start_server: expected str, bytes or os.PathLike object, not NoneType
+2026-09-29 08:27:45,750 - __main__ - INFO - Received signal 2, shutting down...
+2026-09-29 08:27:45,751 - __main__ - INFO - Stopping framework...
+2026-09-29 08:27:45,751 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 08:27:50,753 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 08:27:50,753 - __main__ - INFO - C2 server stopped
+2026-09-29 08:27:50,753 - root - ERROR - 2026-09-29T08:27:50.753280 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 08:27:50,753 - __main__ - INFO - Communication manager stopped
+2026-09-29 08:27:51,439 - __main__ - INFO - Exfiltration engine stopped
+2026-09-29 08:27:51,440 - __main__ - INFO - Framework stopped successfully
+2026-09-29 08:30:49,806 - __main__ - INFO - Initializing framework...
+2026-09-29 08:30:49,807 - __main__ - INFO - Database initialized
+2026-09-29 08:30:49,807 - __main__ - INFO - Session manager initialized
+2026-09-29 08:30:49,807 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 08:30:49,807 - __main__ - INFO - Communication manager initialized
+2026-09-29 08:30:49,807 - __main__ - INFO - C2 server initialized
+2026-09-29 08:30:49,807 - __main__ - INFO - Framework initialization complete
+2026-09-29 08:30:49,807 - __main__ - INFO - Starting framework...
+2026-09-29 08:30:49,809 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 08:30:49,810 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:5000
+2026-09-29 08:30:49,811 - __main__ - INFO - C2 server started
+2026-09-29 08:30:49,814 - __main__ - INFO - Communication manager started
+2026-09-29 08:30:49,816 - __main__ - INFO - Exfiltration engine started
+2026-09-29 08:30:49,817 - __main__ - INFO - Framework started successfully
+2026-09-29 08:30:49,820 - root - WARNING - Port 5000 is not available, using port 5001 instead
+2026-09-29 08:30:49,821 - root - ERROR - 2026-09-29T08:30:49.821492 - Unknown error while exfiltrating start_server: expected str, bytes or os.PathLike object, not NoneType
+2026-09-29 08:31:13,247 - __main__ - INFO - Received signal 2, shutting down...
+2026-09-29 08:31:13,248 - __main__ - INFO - Stopping framework...
+2026-09-29 08:31:13,248 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 08:31:18,248 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 08:31:18,248 - __main__ - INFO - C2 server stopped
+2026-09-29 08:31:18,249 - root - ERROR - 2026-09-29T08:31:18.249077 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 08:31:18,249 - __main__ - INFO - Communication manager stopped
+2026-09-29 08:31:18,856 - __main__ - INFO - Exfiltration engine stopped
+2026-09-29 08:31:18,856 - __main__ - INFO - Framework stopped successfully
+2026-09-29 09:36:05,063 - __main__ - INFO - Initializing framework...
+2026-09-29 09:36:05,064 - __main__ - INFO - Database initialized
+2026-09-29 09:36:05,064 - __main__ - INFO - Session manager initialized
+2026-09-29 09:36:05,065 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 09:36:05,065 - __main__ - INFO - Communication manager initialized
+2026-09-29 09:36:05,065 - __main__ - INFO - C2 server initialized
+2026-09-29 09:36:05,065 - __main__ - INFO - Framework initialization complete
+2026-09-29 09:36:05,065 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 09:36:05,065 - __main__ - ERROR - Failed to start framework: 'DatabaseManager' object has no attribute 'start'
+2026-09-29 09:36:05,065 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 09:36:05,065 - __main__ - ERROR - Error stopping framework: 'PDFDeployer' object has no attribute 'stop'
+2026-09-29 09:41:20,334 - __main__ - INFO - Initializing framework...
+2026-09-29 09:41:20,336 - __main__ - INFO - Database initialized
+2026-09-29 09:41:20,336 - __main__ - INFO - Session manager initialized
+2026-09-29 09:41:20,336 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 09:41:20,336 - __main__ - INFO - Communication manager initialized
+2026-09-29 09:41:20,336 - __main__ - INFO - C2 server initialized
+2026-09-29 09:41:20,336 - __main__ - INFO - Framework initialization complete
+2026-09-29 09:41:20,336 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 09:41:20,336 - __main__ - INFO - Database manager initialized
+2026-09-29 09:41:20,345 - __main__ - INFO - Communications manager started
+2026-09-29 09:41:20,345 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 09:41:20,347 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 09:41:20,351 - __main__ - INFO - C2 server started
+2026-09-29 09:41:20,351 - __main__ - ERROR - Failed to start framework: 'PDFExploiter' object has no attribute 'start'
+2026-09-29 09:41:20,351 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 09:41:20,351 - __main__ - ERROR - Error stopping framework: 'PDFDeployer' object has no attribute 'stop'
+2026-09-29 10:05:34,496 - __main__ - INFO - Initializing framework...
+2026-09-29 10:05:34,497 - __main__ - INFO - Database initialized
+2026-09-29 10:05:34,498 - __main__ - INFO - Session manager initialized
+2026-09-29 10:05:34,498 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:05:34,498 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:05:34,498 - __main__ - INFO - C2 server initialized
+2026-09-29 10:05:34,498 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:05:34,498 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:05:34,498 - __main__ - INFO - Database manager initialized
+2026-09-29 10:05:34,532 - __main__ - INFO - Communications manager started
+2026-09-29 10:05:34,532 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:05:34,533 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:05:34,537 - __main__ - INFO - C2 server started
+2026-09-29 10:05:34,538 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:05:34,538 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:05:34,538 - __main__ - ERROR - Failed to start framework: 'PDFDeployer' object has no attribute 'start'
+2026-09-29 10:05:34,539 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 10:05:34,539 - __main__ - ERROR - Error stopping framework: 'PDFDeployer' object has no attribute 'stop'
+2026-09-29 10:08:35,816 - __main__ - INFO - Initializing framework...
+2026-09-29 10:08:35,817 - __main__ - INFO - Database initialized
+2026-09-29 10:08:35,817 - __main__ - INFO - Session manager initialized
+2026-09-29 10:08:35,817 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:08:35,817 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:08:35,817 - __main__ - INFO - C2 server initialized
+2026-09-29 10:08:35,817 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:08:35,817 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:08:35,817 - __main__ - INFO - Database manager initialized
+2026-09-29 10:08:35,821 - __main__ - INFO - Communications manager started
+2026-09-29 10:08:35,823 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:08:35,823 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:08:35,824 - __main__ - INFO - C2 server started
+2026-09-29 10:08:35,825 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:08:35,825 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:08:35,825 - __main__ - ERROR - Failed to start framework: 'PDFDeployer' object has no attribute 'start'
+2026-09-29 10:08:35,825 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 10:08:35,825 - __main__ - ERROR - Error stopping framework: 'PDFDeployer' object has no attribute 'stop'
+2026-09-29 10:14:06,813 - __main__ - INFO - Initializing framework...
+2026-09-29 10:14:06,818 - __main__ - INFO - Database initialized
+2026-09-29 10:14:06,818 - __main__ - INFO - Session manager initialized
+2026-09-29 10:14:06,818 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:14:06,818 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:14:06,818 - __main__ - INFO - C2 server initialized
+2026-09-29 10:14:06,818 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:14:06,818 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:14:06,818 - __main__ - INFO - Database manager initialized
+2026-09-29 10:14:06,824 - __main__ - INFO - Communications manager started
+2026-09-29 10:14:06,824 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:14:06,825 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:14:06,826 - __main__ - INFO - C2 server started
+2026-09-29 10:14:06,826 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:14:06,826 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:14:06,826 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 10:14:06,826 - __main__ - INFO - PDF deployer started
+2026-09-29 10:14:06,826 - __main__ - INFO - Framework started successfully
+2026-09-29 10:16:44,786 - __main__ - INFO - Initializing framework...
+2026-09-29 10:16:44,790 - __main__ - INFO - Database initialized
+2026-09-29 10:16:44,790 - __main__ - INFO - Session manager initialized
+2026-09-29 10:16:44,790 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:16:44,790 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:16:44,790 - __main__ - INFO - C2 server initialized
+2026-09-29 10:16:44,790 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:16:44,790 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:16:44,790 - __main__ - INFO - Database manager initialized
+2026-09-29 10:16:44,794 - __main__ - INFO - Communications manager started
+2026-09-29 10:16:44,794 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:16:44,794 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:16:44,795 - __main__ - INFO - C2 server started
+2026-09-29 10:16:44,795 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:16:44,795 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:16:44,795 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 10:16:44,795 - __main__ - INFO - PDF deployer started
+2026-09-29 10:16:44,795 - __main__ - INFO - Framework started successfully
+2026-09-29 10:26:12,583 - __main__ - INFO - Initializing framework...
+2026-09-29 10:26:12,591 - __main__ - INFO - Database initialized
+2026-09-29 10:26:12,592 - __main__ - INFO - Session manager initialized
+2026-09-29 10:26:12,592 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:26:12,592 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:26:12,592 - __main__ - INFO - C2 server initialized
+2026-09-29 10:26:12,592 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:26:12,592 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:26:12,592 - __main__ - INFO - Database manager initialized
+2026-09-29 10:26:12,595 - __main__ - INFO - Communications manager started
+2026-09-29 10:26:12,595 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:26:12,595 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:26:12,597 - __main__ - INFO - C2 server started
+2026-09-29 10:26:12,597 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:26:12,597 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:26:12,597 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 10:26:12,597 - __main__ - INFO - PDF deployer started
+2026-09-29 10:26:12,597 - __main__ - INFO - Framework started successfully
+2026-09-29 10:28:17,756 - __main__ - INFO - Initializing framework...
+2026-09-29 10:28:17,756 - __main__ - INFO - Database initialized
+2026-09-29 10:28:17,757 - __main__ - INFO - Session manager initialized
+2026-09-29 10:28:17,757 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:28:17,757 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:28:17,757 - __main__ - INFO - C2 server initialized
+2026-09-29 10:28:17,757 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:28:17,757 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:28:17,757 - __main__ - INFO - Database manager initialized
+2026-09-29 10:28:17,772 - __main__ - INFO - Communications manager started
+2026-09-29 10:28:17,772 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:28:17,772 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:28:17,773 - __main__ - INFO - C2 server started
+2026-09-29 10:28:17,773 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:28:17,775 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:28:17,775 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 10:28:17,775 - __main__ - INFO - PDF deployer started
+2026-09-29 10:28:17,775 - __main__ - INFO - Framework started successfully
+2026-09-29 10:28:17,775 - __main__ - ERROR - Failed to start framework
+2026-09-29 10:28:17,775 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 10:28:17,775 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 10:28:17,775 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 10:28:17,776 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 10:28:17,828 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 10:28:17,828 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 10:28:22,780 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 10:28:22,780 - root - ERROR - 2026-09-29T10:28:22.780188 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 10:28:22,780 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 10:29:53,492 - __main__ - INFO - Initializing framework...
+2026-09-29 10:29:53,493 - __main__ - INFO - Database initialized
+2026-09-29 10:29:53,493 - __main__ - INFO - Session manager initialized
+2026-09-29 10:29:53,494 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:29:53,494 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:29:53,494 - __main__ - INFO - C2 server initialized
+2026-09-29 10:29:53,494 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:29:53,494 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:29:53,494 - __main__ - INFO - Database manager initialized
+2026-09-29 10:29:53,497 - __main__ - INFO - Communications manager started
+2026-09-29 10:29:53,497 - c2.c2_server - INFO - Starting C2 server...
+2026-09-29 10:29:53,497 - c2.c2_server - INFO - C2 server listening on 0.0.0.0:8081
+2026-09-29 10:29:53,501 - __main__ - INFO - C2 server started
+2026-09-29 10:29:53,501 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:29:53,501 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:29:53,501 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 10:29:53,502 - __main__ - INFO - PDF deployer started
+2026-09-29 10:29:53,502 - __main__ - INFO - Framework started successfully
+2026-09-29 10:29:53,513 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 10:29:53,513 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 10:40:31,960 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 10:40:31,966 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 10:40:31,966 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 10:40:31,966 - c2.c2_server - INFO - Stopping C2 server...
+2026-09-29 10:40:36,969 - c2.c2_server - INFO - C2 server stopped
+2026-09-29 10:40:36,970 - root - ERROR - 2026-09-29T10:40:36.970799 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 10:40:36,972 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 10:58:47,284 - __main__ - INFO - Initializing framework...
+2026-09-29 10:58:47,291 - __main__ - INFO - Database initialized
+2026-09-29 10:58:47,291 - __main__ - INFO - Session manager initialized
+2026-09-29 10:58:47,291 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 10:58:47,291 - __main__ - INFO - Communication manager initialized
+2026-09-29 10:58:47,291 - __main__ - INFO - C2 server initialized
+2026-09-29 10:58:47,291 - __main__ - INFO - Framework initialization complete
+2026-09-29 10:58:47,291 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 10:58:47,291 - __main__ - INFO - Database manager initialized
+2026-09-29 10:58:47,312 - __main__ - INFO - Communications manager started
+2026-09-29 10:58:47,312 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 10:58:47,312 - __main__ - INFO - PDF exploiter started
+2026-09-29 10:58:47,312 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 10:58:47,312 - __main__ - INFO - PDF deployer started
+2026-09-29 10:58:47,312 - __main__ - INFO - Framework started successfully
+2026-09-29 10:58:47,374 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 10:58:47,374 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 10:58:47,375 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 10:58:47,375 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 10:59:41,799 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 10:59:41,800 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 10:59:41,800 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 10:59:41,800 - root - ERROR - 2026-09-29T10:59:41.800463 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 10:59:41,800 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 11:05:56,102 - __main__ - INFO - Initializing framework...
+2026-09-29 11:05:56,104 - __main__ - INFO - Database initialized
+2026-09-29 11:05:56,104 - __main__ - INFO - Session manager initialized
+2026-09-29 11:05:56,104 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 11:05:56,104 - __main__ - INFO - Communication manager initialized
+2026-09-29 11:05:56,104 - __main__ - INFO - C2 server initialized
+2026-09-29 11:05:56,104 - __main__ - INFO - Framework initialization complete
+2026-09-29 11:05:56,104 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 11:05:56,104 - __main__ - INFO - Database manager initialized
+2026-09-29 11:05:56,148 - __main__ - INFO - Communications manager started
+2026-09-29 11:05:56,149 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 11:05:56,149 - __main__ - INFO - PDF exploiter started
+2026-09-29 11:05:56,149 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 11:05:56,149 - __main__ - INFO - PDF deployer started
+2026-09-29 11:05:56,149 - __main__ - INFO - Framework started successfully
+2026-09-29 11:05:56,170 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 11:05:56,170 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:05:56,172 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 11:05:56,172 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:05:59,865 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 11:05:59,866 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 11:05:59,866 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 11:05:59,867 - root - ERROR - 2026-09-29T11:05:59.867058 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 11:05:59,867 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 11:06:10,311 - __main__ - INFO - Initializing framework...
+2026-09-29 11:06:10,313 - __main__ - INFO - Database initialized
+2026-09-29 11:06:10,313 - __main__ - INFO - Session manager initialized
+2026-09-29 11:06:10,313 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 11:06:10,313 - __main__ - INFO - Communication manager initialized
+2026-09-29 11:06:10,313 - __main__ - INFO - C2 server initialized
+2026-09-29 11:06:10,313 - __main__ - INFO - Framework initialization complete
+2026-09-29 11:06:10,313 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 11:06:10,313 - __main__ - INFO - Database manager initialized
+2026-09-29 11:06:10,341 - __main__ - INFO - Communications manager started
+2026-09-29 11:06:10,344 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 11:06:10,344 - __main__ - INFO - PDF exploiter started
+2026-09-29 11:06:10,344 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 11:06:10,344 - __main__ - INFO - PDF deployer started
+2026-09-29 11:06:10,345 - __main__ - INFO - Framework started successfully
+2026-09-29 11:06:10,350 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 11:06:10,350 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:06:10,351 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 11:06:10,351 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:06:17,975 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 11:06:17,975 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 11:06:17,975 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 11:06:17,976 - root - ERROR - 2026-09-29T11:06:17.976122 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 11:06:17,976 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 11:25:52,499 - __main__ - INFO - Initializing framework...
+2026-09-29 11:25:52,501 - __main__ - INFO - Database initialized
+2026-09-29 11:25:52,501 - __main__ - INFO - Session manager initialized
+2026-09-29 11:25:52,501 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 11:25:52,501 - __main__ - INFO - Communication manager initialized
+2026-09-29 11:25:52,501 - __main__ - INFO - C2 server initialized
+2026-09-29 11:25:52,501 - __main__ - INFO - Framework initialization complete
+2026-09-29 11:25:52,501 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 11:25:52,501 - __main__ - INFO - Database manager initialized
+2026-09-29 11:25:52,536 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 11:25:52,537 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:25:52,541 - __main__ - INFO - Communications manager started
+2026-09-29 11:25:52,542 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 11:25:52,543 - __main__ - INFO - PDF exploiter started
+2026-09-29 11:25:52,543 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 11:25:52,543 - __main__ - INFO - PDF deployer started
+2026-09-29 11:25:52,543 - __main__ - INFO - Framework started successfully
+2026-09-29 11:25:52,546 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 11:25:52,547 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:26:42,831 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 11:26:42,831 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 11:26:42,832 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 11:26:42,832 - root - ERROR - 2026-09-29T11:26:42.832187 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 11:26:42,832 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 11:30:56,418 - __main__ - INFO - Initializing framework...
+2026-09-29 11:30:56,424 - __main__ - INFO - Database initialized
+2026-09-29 11:30:56,426 - __main__ - INFO - Session manager initialized
+2026-09-29 11:30:56,428 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 11:30:56,428 - __main__ - INFO - Communication manager initialized
+2026-09-29 11:30:56,428 - __main__ - INFO - C2 server initialized
+2026-09-29 11:30:56,428 - __main__ - INFO - Framework initialization complete
+2026-09-29 11:30:56,428 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 11:30:56,429 - __main__ - INFO - Database manager initialized
+2026-09-29 11:30:56,481 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 11:30:56,483 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:30:56,488 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 11:30:56,488 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 11:30:56,489 - __main__ - INFO - Communications manager started
+2026-09-29 11:30:56,489 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 11:30:56,489 - __main__ - INFO - PDF exploiter started
+2026-09-29 11:30:56,489 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 11:30:56,489 - __main__ - INFO - PDF deployer started
+2026-09-29 11:30:56,489 - __main__ - INFO - Framework started successfully
+2026-09-29 11:30:59,899 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 11:30:59,899 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 11:30:59,899 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 11:30:59,899 - root - ERROR - 2026-09-29T11:30:59.899556 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 11:30:59,899 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 21:24:45,031 - __main__ - INFO - Initializing framework...
+2026-09-29 21:24:45,033 - __main__ - INFO - Database initialized
+2026-09-29 21:24:45,034 - __main__ - INFO - Session manager initialized
+2026-09-29 21:24:45,034 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 21:24:45,034 - __main__ - INFO - Communication manager initialized
+2026-09-29 21:24:45,034 - __main__ - INFO - C2 server initialized
+2026-09-29 21:24:45,034 - __main__ - INFO - Framework initialization complete
+2026-09-29 21:24:45,034 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 21:24:45,034 - __main__ - INFO - Database manager initialized
+2026-09-29 21:24:45,062 - __main__ - INFO - Communications manager started
+2026-09-29 21:24:45,062 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 21:24:45,062 - __main__ - INFO - PDF exploiter started
+2026-09-29 21:24:45,063 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 21:24:45,063 - __main__ - INFO - PDF deployer started
+2026-09-29 21:24:45,063 - __main__ - INFO - Framework started successfully
+2026-09-29 21:24:45,083 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 21:24:45,084 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 21:24:45,083 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 21:24:45,084 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 21:24:50,136 - __main__ - INFO - Stopping surveillance framework...
+2026-09-29 21:24:50,137 - tools.pdf_deployer - INFO - PDFDeployer service stopped
+2026-09-29 21:24:50,137 - exploitation.pdf_exploiter - INFO - PDFExploiter service stopped
+2026-09-29 21:24:50,137 - root - ERROR - 2026-09-29T21:24:50.137419 - Unknown error while exfiltrating stop_server: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-09-29 21:24:50,138 - __main__ - ERROR - Error stopping framework: 'DatabaseManager' object has no attribute 'stop'
+2026-09-29 21:42:44,117 - __main__ - INFO - Initializing framework...
+2026-09-29 21:42:44,118 - __main__ - INFO - Database initialized
+2026-09-29 21:42:44,119 - __main__ - INFO - Session manager initialized
+2026-09-29 21:42:44,119 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 21:42:44,119 - __main__ - INFO - Communication manager initialized
+2026-09-29 21:42:44,120 - __main__ - INFO - C2 server initialized
+2026-09-29 21:42:44,120 - __main__ - INFO - Framework initialization complete
+2026-09-29 21:42:44,120 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 21:42:44,120 - __main__ - INFO - Database manager initialized
+2026-09-29 21:42:44,143 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 21:42:44,143 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 21:42:44,144 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 21:42:44,144 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 21:42:44,145 - __main__ - INFO - Communications manager started
+2026-09-29 21:42:44,145 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 21:42:44,145 - __main__ - INFO - PDF exploiter started
+2026-09-29 21:42:44,146 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 21:42:44,146 - __main__ - INFO - PDF deployer started
+2026-09-29 21:42:44,146 - __main__ - INFO - Framework started successfully
+2026-09-29 21:56:41,745 - __main__ - INFO - Initializing framework...
+2026-09-29 21:56:41,747 - __main__ - INFO - Database initialized
+2026-09-29 21:56:41,747 - __main__ - INFO - Session manager initialized
+2026-09-29 21:56:41,747 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 21:56:41,747 - __main__ - INFO - Communication manager initialized
+2026-09-29 21:56:41,747 - __main__ - INFO - C2 server initialized
+2026-09-29 21:56:41,747 - __main__ - INFO - Framework initialization complete
+2026-09-29 21:56:41,747 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 21:56:41,747 - __main__ - INFO - Database manager initialized
+2026-09-29 21:56:41,760 - __main__ - ERROR - Failed to start framework: Failed to start C2 server: name 'server_thread' is not defined
+2026-09-29 22:11:00,238 - __main__ - INFO - Initializing framework...
+2026-09-29 22:11:00,239 - __main__ - INFO - Database initialized
+2026-09-29 22:11:00,239 - __main__ - INFO - Session manager initialized
+2026-09-29 22:11:00,239 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 22:11:00,259 - __main__ - INFO - Communication manager initialized
+2026-09-29 22:11:00,260 - __main__ - INFO - C2 server initialized
+2026-09-29 22:11:00,260 - __main__ - INFO - Framework initialization complete
+2026-09-29 22:11:00,260 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 22:11:00,260 - __main__ - INFO - Database manager initialized
+2026-09-29 22:11:00,281 - __main__ - INFO - Communications manager started
+2026-09-29 22:11:00,281 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 22:11:00,281 - __main__ - INFO - PDF exploiter started
+2026-09-29 22:11:00,282 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 22:11:00,282 - __main__ - INFO - PDF deployer started
+2026-09-29 22:11:00,282 - __main__ - INFO - Framework started successfully
+2026-09-29 22:11:00,288 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 22:11:00,289 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 22:11:00,290 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 22:11:00,290 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 22:57:15,107 - __main__ - INFO - Initializing framework...
+2026-09-29 22:57:15,108 - __main__ - INFO - Database initialized
+2026-09-29 22:57:15,108 - __main__ - INFO - Session manager initialized
+2026-09-29 22:57:15,108 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 22:57:15,108 - __main__ - INFO - Communication manager initialized
+2026-09-29 22:57:15,108 - __main__ - INFO - C2 server initialized
+2026-09-29 22:57:15,108 - __main__ - INFO - Framework initialization complete
+2026-09-29 22:57:15,108 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 22:57:15,108 - __main__ - INFO - Database manager initialized
+2026-09-29 22:57:15,108 - c2.comms_manager - INFO - Starting C2 server on 0.0.0.0:5001
+2026-09-29 22:57:15,113 - c2.comms_manager - INFO - C2 server started successfully on 0.0.0.0:5001
+2026-09-29 22:57:15,125 - c2.comms_manager - INFO - HTTP server started on 0.0.0.0:8081
+2026-09-29 22:57:15,125 - __main__ - INFO - Communications manager started
+2026-09-29 22:57:15,125 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 22:57:15,126 - __main__ - INFO - PDF exploiter started
+2026-09-29 22:57:15,126 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 22:57:15,127 - __main__ - INFO - PDF deployer started
+2026-09-29 22:57:15,127 - __main__ - INFO - Framework started successfully
+2026-09-29 22:57:15,147 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 22:57:15,147 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 22:57:15,149 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 22:57:15,149 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 22:57:27,336 - core.database_manager - INFO - Database connections closed
+2026-09-29 22:59:29,499 - __main__ - INFO - Initializing framework...
+2026-09-29 22:59:29,500 - __main__ - INFO - Database initialized
+2026-09-29 22:59:29,500 - __main__ - INFO - Session manager initialized
+2026-09-29 22:59:29,500 - __main__ - INFO - Exfiltration engine initialized
+2026-09-29 22:59:29,500 - __main__ - INFO - Communication manager initialized
+2026-09-29 22:59:29,500 - __main__ - INFO - C2 server initialized
+2026-09-29 22:59:29,500 - __main__ - INFO - Framework initialization complete
+2026-09-29 22:59:29,500 - __main__ - INFO - Starting surveillance framework...
+2026-09-29 22:59:29,500 - __main__ - INFO - Database manager initialized
+2026-09-29 22:59:29,500 - c2.comms_manager - INFO - Starting C2 server on 0.0.0.0:5001
+2026-09-29 22:59:29,512 - c2.comms_manager - INFO - C2 server started successfully on 0.0.0.0:5001
+2026-09-29 22:59:29,521 - c2.comms_manager - INFO - HTTP server started on 0.0.0.0:8081
+2026-09-29 22:59:29,521 - __main__ - INFO - Communications manager started
+2026-09-29 22:59:29,522 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-29 22:59:29,524 - __main__ - INFO - PDF exploiter started
+2026-09-29 22:59:29,524 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-29 22:59:29,524 - __main__ - INFO - PDF deployer started
+2026-09-29 22:59:29,525 - __main__ - INFO - Framework started successfully
+2026-09-29 22:59:29,556 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-29 22:59:29,557 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 22:59:29,559 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-29 22:59:29,559 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-29 23:00:12,744 - core.database_manager - INFO - Database connections closed
+2026-09-30 00:22:42,690 - __main__ - INFO - Initializing framework...
+2026-09-30 00:22:42,692 - __main__ - INFO - Database initialized
+2026-09-30 00:22:42,693 - __main__ - INFO - Session manager initialized
+2026-09-30 00:22:42,693 - __main__ - INFO - Exfiltration engine initialized
+2026-09-30 00:22:42,693 - __main__ - INFO - Communication manager initialized
+2026-09-30 00:22:42,693 - __main__ - INFO - C2 server initialized
+2026-09-30 00:22:42,693 - __main__ - INFO - Framework initialization complete
+2026-09-30 00:22:42,693 - __main__ - INFO - Starting surveillance framework...
+2026-09-30 00:22:42,693 - __main__ - INFO - Database manager initialized
+2026-09-30 00:22:42,693 - c2.comms_manager - INFO - Starting C2 server on 0.0.0.0:5001
+2026-09-30 00:22:42,708 - c2.comms_manager - INFO - C2 server started successfully on 0.0.0.0:5001
+2026-09-30 00:22:42,723 - c2.comms_manager - INFO - HTTP server started on 0.0.0.0:8081
+2026-09-30 00:22:42,723 - __main__ - INFO - Communications manager started
+2026-09-30 00:22:42,723 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-30 00:22:42,726 - __main__ - INFO - PDF exploiter started
+2026-09-30 00:22:42,726 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-30 00:22:42,727 - __main__ - INFO - PDF deployer started
+2026-09-30 00:22:42,728 - __main__ - INFO - Framework started successfully
+2026-09-30 00:22:42,741 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-30 00:22:42,741 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-30 00:22:42,742 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-30 00:22:42,742 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-30 00:22:53,980 - core.database_manager - INFO - Database connections closed
+2026-09-30 00:23:27,980 - __main__ - INFO - Initializing framework...
+2026-09-30 00:23:27,982 - __main__ - INFO - Database initialized
+2026-09-30 00:23:27,982 - __main__ - INFO - Session manager initialized
+2026-09-30 00:23:27,982 - __main__ - INFO - Exfiltration engine initialized
+2026-09-30 00:23:27,982 - __main__ - INFO - Communication manager initialized
+2026-09-30 00:23:27,982 - __main__ - INFO - C2 server initialized
+2026-09-30 00:23:27,982 - __main__ - INFO - Framework initialization complete
+2026-09-30 00:23:27,982 - __main__ - INFO - Starting surveillance framework...
+2026-09-30 00:23:27,982 - __main__ - INFO - Database manager initialized
+2026-09-30 00:23:27,982 - c2.comms_manager - INFO - Starting C2 server on 0.0.0.0:5001
+2026-09-30 00:23:27,996 - c2.comms_manager - INFO - C2 server started successfully on 0.0.0.0:5001
+2026-09-30 00:23:28,007 - c2.comms_manager - INFO - HTTP server started on 0.0.0.0:8081
+2026-09-30 00:23:28,007 - __main__ - INFO - Communications manager started
+2026-09-30 00:23:28,007 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-30 00:23:28,015 - __main__ - INFO - PDF exploiter started
+2026-09-30 00:23:28,015 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-30 00:23:28,016 - __main__ - INFO - PDF deployer started
+2026-09-30 00:23:28,016 - __main__ - INFO - Framework started successfully
+2026-09-30 00:23:28,017 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-30 00:23:28,017 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-30 00:23:28,015 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-30 00:23:28,017 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-30 00:23:46,905 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2026 00:23:46] "[33mGET / HTTP/1.1[0m" 404 -
+2026-09-30 00:23:55,711 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2026 00:23:55] "[33mGET / HTTP/1.1[0m" 404 -
+2026-09-30 00:23:55,852 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2026 00:23:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-30 00:28:34,881 - core.database_manager - INFO - Database connections closed
+2026-09-30 00:37:26,399 - __main__ - INFO - Initializing framework...
+2026-09-30 00:37:26,402 - __main__ - INFO - Database initialized
+2026-09-30 00:37:26,402 - __main__ - INFO - Session manager initialized
+2026-09-30 00:37:26,402 - __main__ - INFO - Exfiltration engine initialized
+2026-09-30 00:37:26,402 - __main__ - INFO - Communication manager initialized
+2026-09-30 00:37:26,402 - __main__ - INFO - C2 server initialized
+2026-09-30 00:37:26,402 - __main__ - INFO - Framework initialization complete
+2026-09-30 00:37:26,402 - __main__ - INFO - Starting surveillance framework...
+2026-09-30 00:37:26,402 - __main__ - INFO - Database manager initialized
+2026-09-30 00:37:26,403 - c2.comms_manager - INFO - Starting C2 server on 0.0.0.0:5001
+2026-09-30 00:37:26,408 - c2.comms_manager - INFO - C2 server started successfully on 0.0.0.0:5001
+2026-09-30 00:37:26,422 - c2.comms_manager - INFO - HTTP server started on 0.0.0.0:8081
+2026-09-30 00:37:26,423 - __main__ - INFO - Communications manager started
+2026-09-30 00:37:26,424 - exploitation.pdf_exploiter - INFO - PDFExploiter service started
+2026-09-30 00:37:26,425 - __main__ - INFO - PDF exploiter started
+2026-09-30 00:37:26,425 - tools.pdf_deployer - INFO - PDFDeployer service started
+2026-09-30 00:37:26,425 - __main__ - INFO - PDF deployer started
+2026-09-30 00:37:26,426 - __main__ - INFO - Framework started successfully
+2026-09-30 00:37:26,439 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:5001
+ * Running on https://10.0.2.15:5001
+2026-09-30 00:37:26,439 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-30 00:37:26,455 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.0.2.15:8081
+2026-09-30 00:37:26,455 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-30 00:38:05,688 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2026 00:38:05] "[33mGET / HTTP/1.1[0m" 404 -
+2026-09-30 00:55:40,137 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2026 00:55:40] "[33mGET / HTTP/1.1[0m" 404 -

